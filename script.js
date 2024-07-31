@@ -4,7 +4,7 @@ async function sendMessageToChatGPT(systemPrompt, articleContent, userMessage) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer sk-svcacct-rS9UPl1476p8kYX7uXsNT3BlbkFJwYZ47DwAMONme0lfvLzm`
+                'Authorization': `Bearer sk-None-3AzkkmqhiqCL8Gn7m3bGT3BlbkFJqvj5P2OMTeAp3QyuLW6w`
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
@@ -46,22 +46,22 @@ async function summarizeArticle() {
     systemPrompt = initialSystemPrompt;
     articleContent = initialArticleContent;
     const userMessage = "Please summarize this article.";
-	const chatPrompt = "Please summarize this article."
+    const chatPrompt = "Please summarize this article.";
 
-    displayMessage('User', userMessage);
+    displayMessage('You', userMessage);
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
-    displayMessage('ChatGPT', responseMessage);
+    displayMessage('NewsChat', responseMessage);
 }
 
 async function getKeyTakeaways() {
     systemPrompt = initialSystemPrompt;
     articleContent = initialArticleContent;
-    const userMessage = "Please give me the keytaways from this article.";
-	const chatPrompt = "Give me the main key takeaways from this article in numbered bullet points."
+    const userMessage = "Please give me the key takeaways from this article.";
+    const chatPrompt = "Give me the main key takeaways from this article in numbered bullet points.";
 
-    displayMessage('User', userMessage);
+    displayMessage('You', userMessage);
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
-    displayMessage('ChatGPT', responseMessage);
+    displayMessage('NewsChat', responseMessage);
 }
 
 async function sendMessage() {
@@ -69,7 +69,17 @@ async function sendMessage() {
     articleContent = initialArticleContent;
     const userMessage = document.getElementById('message-input').value;
 
-    displayMessage('User', userMessage);
+    displayMessage('You', userMessage);
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, userMessage);
-    displayMessage('ChatGPT', responseMessage);
+    displayMessage('NewsChat', responseMessage);
+
+    // Clear the input area
+    document.getElementById('message-input').value = '';
 }
+
+// Add event listener for Enter key
+document.getElementById('message-input').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
