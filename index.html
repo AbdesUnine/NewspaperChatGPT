@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<button class="fixed-button" onclick="redirectToQualtrics()">Revenir à Qualtrics</button>
+<button class="fixed-button" onclick="redirectToQualtrics()">Return to Qualtrics</button>
 
 <div class="page-wrapper">
 <div class="container">
@@ -186,12 +186,37 @@ Published on July 9, 2021 at 5:00 PM
 
 
 <script>
-	var startTime;
-	var chatData = [];
+    var startTime;
+    var chatData = [];
+    var openAiApiKey = null;
 
-	window.onload = function() {
-		startTime = new Date();
-	};
+    window.onload = function() {
+        startTime = new Date();
+
+        // Function to fetch the OpenAI API key from the Heroku app
+        async function fetchApiKey() {
+            try {
+                const response = await fetch('https://peaceful-thicket-55394-e28e13604021.herokuapp.com/get-secret', {
+                    method: 'GET',
+                    headers: {
+                        'X-API-KEY': 'lhskjdakKJH-24dsfzuidJKLHS7878sde878fueh32' // Replace with your actual Heroku API key
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch API key: ${response.status} ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                openAiApiKey = data.secret_key;
+            } catch (error) {
+                console.error('Error fetching API key:', error);
+            }
+        }
+
+        // Call the fetchApiKey function to get the API key
+        fetchApiKey();
+    };
 </script>
 <script src="system-prompt.js"></script>
 <script src="article-content.js"></script>

@@ -1,11 +1,16 @@
 // Function to send messages to ChatGPT and receive responses
 async function sendMessageToChatGPT(systemPrompt, articleContent, userMessage) {
+    if (!openAiApiKey) {
+        console.error('API key not available');
+        return 'Error: API key not available';
+    }
+
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer sk-None-3AzkkmqhiqCL8Gn7m3bGT3BlbkFJqvj5P2OMTeAp3QyuLW6w`
+                'Authorization': `Bearer ${openAiApiKey}`
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
