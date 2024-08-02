@@ -13,7 +13,7 @@ async function sendMessageToChatGPT(systemPrompt, articleContent, userMessage) {
                 'Authorization': `Bearer ${openAiApiKey}`
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: "gpt-4o",
                 messages: [
                     { role: "system", content: systemPrompt },
                     { role: "user", content: `Article: ${articleContent}` },
