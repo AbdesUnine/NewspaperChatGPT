@@ -57,7 +57,7 @@ async function summarizeArticle() {
     systemPrompt = initialSystemPrompt;
     articleContent = initialArticleContent;
     const userMessage = "Please summarize this article.";
-    const chatPrompt = "Please summarize this article.";
+    const chatPrompt = "Summarize the article in your own style, focusing on these points: 60% have received at least one dose of the COVID-19 vaccine. No differences across genders or linguistics regions. Opinions are almost evenly split about vaccinating health workers, with nearly as many respondents opposing the mandate as supporting it. Solidarity has decreased and selfishness increased since the beginning of the crisis. Trust in the government has increased to over 54% after a low in January.";
 
     displayMessage('You', userMessage);
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
@@ -69,7 +69,7 @@ async function getKeyTakeaways() {
     systemPrompt = initialSystemPrompt;
     articleContent = initialArticleContent;
     const userMessage = "Please give me the key takeaways from this article.";
-    const chatPrompt = "Give me the main key takeaways from this article in numbered bullet points.";
+    const chatPrompt = "Give the main key takeaways in numbered bullet points in your own style, focusing on these points: 60% have received at least one dose of the COVID-19 vaccine. No differences across genders or linguistics regions. Opinions are almost evenly split about vaccinating health workers, with nearly as many respondents opposing the mandate as supporting it. Solidarity has decreased and selfishness increased since the beginning of the crisis. Trust in the government has increased to over 54% after a low in January.";
 
     displayMessage('You', userMessage);
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
