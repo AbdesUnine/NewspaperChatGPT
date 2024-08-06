@@ -119,7 +119,7 @@ async function sendMessage() {
     displayMessage('You', userMessage);
 
     // Send the message to ChatGPT and get a response
-    const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
+    const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, userMessage);
 
     // Display ChatGPT's response
     displayMessage('NewsChat', responseMessage);
