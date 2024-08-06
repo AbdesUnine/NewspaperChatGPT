@@ -167,6 +167,12 @@ Published on July 9, 2021 at 5:00 PM
 
     <div id="chat-container">
         <div id="chat-output"></div>
+		<div id="chat-spacer"></div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typing-indicator" style="display: none; margin-top: 10px; font-size: 14px; color: #555;">
+        NewsChat is typing<span id="typing-dots">...</span>
     </div>
 
     <textarea id="message-input" placeholder="Ask me any question about this article..." style="font-size: 12px;"></textarea>
@@ -174,7 +180,6 @@ Published on July 9, 2021 at 5:00 PM
         <button id="send-button" onclick="sendMessage()">Send</button>
     </div>
 </div>
-
 
 <script>
     var startTime;

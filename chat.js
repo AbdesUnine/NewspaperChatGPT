@@ -1,5 +1,30 @@
 const my_var_here = 'c2stc3ZjYWNjdC13TG5kMHJWUkRSc0RxQXVWVXpQMDhmZXdQbnZUWXpQWUYxZERXMTdHMFNhZXB1RTdUM0JsYmtGSkhkeDYwSmhUaDFxTXdMN2RZUlJnWjJFVzVZZVJpQjVkYUFLNnZKdFZySjJEbnVBQQ==';
 
+// Function to display the typing indicator
+function showTypingIndicator() {
+    const typingIndicator = document.getElementById('typing-indicator');
+    typingIndicator.style.display = 'block';
+}
+
+// Function to hide the typing indicator
+function hideTypingIndicator() {
+    const typingIndicator = document.getElementById('typing-indicator');
+    typingIndicator.style.display = 'none';
+}
+
+// Function to simulate the typing dots animation
+function animateTypingDots() {
+    const typingDots = document.getElementById('typing-dots');
+    let dotCount = 0;
+    const interval = setInterval(() => {
+        dotCount = (dotCount + 1) % 4; // Cycle through 0, 1, 2, 3
+        typingDots.innerHTML = '.'.repeat(dotCount);
+    }, 500); // Update every 500ms
+
+    // Return a function to stop the animation
+    return () => clearInterval(interval);
+}
+
 // Function to send messages to ChatGPT and receive responses
 async function sendMessageToChatGPT(systemPrompt, articleContent, userMessage) {
     try {
@@ -46,37 +71,17 @@ function displayMessage(role, message) {
     messageDiv.classList.add('message');
     messageDiv.innerHTML = `<strong>${role}:</strong> <p>${message}</p>`;
     chatOutput.appendChild(messageDiv);
-    messageDiv.scrollIntoView({ behavior: 'smooth' });
+
+    // Use a small timeout to ensure the DOM is updated before scrolling
+    setTimeout(() => {
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
 }
 
-// Function to summarize the article
-async function summarizeArticle() {
-    systemPrompt = initialSystemPrompt;
-    articleContent = initialArticleContent;
-    const userMessage = "Please summarize this article.";
-    const chatPrompt = "Summarize the article in your own style, focusing on these points: 60% have received at least one dose of the COVID-19 vaccine. No differences across genders or linguistics regions. Opinions are almost evenly split about vaccinating health workers, with nearly as many respondents opposing the mandate as supporting it. Solidarity has decreased and selfishness increased since the beginning of the crisis. Trust in the government has increased to over 54% after a low in January. Please do not use formatting characters such as **";
-
-    displayMessage('You', userMessage);
-    const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
-    displayMessage('NewsChat', responseMessage);
-}
-
-// Function to get key takeaways from the article
-async function getKeyTakeaways() {
-    systemPrompt = initialSystemPrompt;
-    articleContent = initialArticleContent;
-    const userMessage = "Please give me the key takeaways from this article.";
-    const chatPrompt = "Give the main key takeaways in numbered bullet points in your own style, focusing on these points: 60% have received at least one dose of the COVID-19 vaccine. No differences across genders or linguistics regions. Opinions are almost evenly split about vaccinating health workers, with nearly as many respondents opposing the mandate as supporting it. Solidarity has decreased and selfishness increased since the beginning of the crisis. Trust in the government has increased to over 54% after a low in January. Please do not use formatting characters such as **";
-
-    displayMessage('You', userMessage);
-    const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
-    displayMessage('NewsChat', responseMessage);
-}
 
 // Function to send a custom message
 async function sendMessage() {
-	
-	// Check if it's the first message
+    // Check if it's the first message
     if (isFirstMessage) {
         // Display the initial prompt from the chatbot
         const initialMessage = "Hi there! I’m NewsChat, your reading assistant. This article contains a wealth of data and insights. Don't hesitate to ask me any questions you have about the data. I'm here to help you understand and navigate the information presented!";
@@ -84,9 +89,9 @@ async function sendMessage() {
 
         // Set the flag to false after the initial message is sent
         isFirstMessage = false;
-		return;
+        return;
     }
-	
+
     // Retrieve the user input
     const userMessage = document.getElementById('message-input').value.trim();
 
@@ -98,21 +103,27 @@ async function sendMessage() {
     // Reset system prompt and article content to initial values
     systemPrompt = initialSystemPrompt;
     articleContent = initialArticleContent;
-    
+
     // Clear the input area
     document.getElementById('message-input').value = '';
 
     // Display the user's message
     displayMessage('You', userMessage);
 
+    // Show the typing indicator
+    showTypingIndicator();
+    const stopTypingDots = animateTypingDots();
+
     // Send the message to ChatGPT and get a response
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, userMessage);
+
+    // Hide the typing indicator
+    hideTypingIndicator();
+    stopTypingDots();
 
     // Display ChatGPT's response
     displayMessage('NewsChat', responseMessage);
 }
-
-
 
 // Add event listener for Enter key
 document.getElementById('message-input').addEventListener('keydown', function (event) {
