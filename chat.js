@@ -98,19 +98,6 @@ async function sendMessage() {
     // Reset system prompt and article content to initial values
     systemPrompt = initialSystemPrompt;
     articleContent = initialArticleContent;
-
-    // Convert the input to lowercase for case-insensitive checking
-    const lowerCaseMessage = userMessage.toLowerCase();
-
-    // Check if the input contains any of the relevant terms
-    const chatPrompt = lowerCaseMessage.includes('summarize') ||
-                       lowerCaseMessage.includes('takeaways') ||
-                       lowerCaseMessage.includes('overview') ||
-                       lowerCaseMessage.includes('highlight') ||
-                       lowerCaseMessage.includes('summary') ||
-                       lowerCaseMessage.includes('recap')
-        ? "Summarize the article in your own style, focusing on these points: 60% have received at least one dose of the COVID-19 vaccine. No differences across genders or linguistics regions. Opinions are almost evenly split about vaccinating health workers, with nearly as many respondents opposing the mandate as supporting it. Solidarity has decreased and selfishness increased since the beginning of the crisis. Trust in the government has increased to over 54% after a low in January. Please do not use formatting characters such as **"
-        : userMessage;
     
     // Clear the input area
     document.getElementById('message-input').value = '';
