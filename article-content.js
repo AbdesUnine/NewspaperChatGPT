@@ -16,32 +16,32 @@ Since the last survey in March, the vaccination campaign has made significant pr
 #Begin graph placehoder 1.
 This is a placeholder for graph 1 titled "Would you like to get vaccinated against Covid-19?" presents survey data on the willingness to receive the COVID-19 vaccine among the Swiss population. The data is segmented by various demographic factors, including linguistic region, gender, place of residence, age, and political party affiliation. The responses are categorized into five groups, each represented by a different color: dark green indicates those who are already entirely vaccinated, medium green for those who received the first dose, light green for those who would like to get vaccinated, gray for those who are undecided, and red for those who will not get vaccinated.
 Linguistic Region:
-In the entire Switzerland, 48.5% of respondents are already entirely vaccinated. An additional 12% have received the first dose, and 12% would like to get vaccinated. However, 25.5% are undecided, and 2% state they will not get vaccinated.
-In French-speaking Switzerland, 48% of respondents are entirely vaccinated. 13.5% have received the first dose, and 13.5% would like to get vaccinated. A smaller percentage, 23%, are undecided, and 2% will not get vaccinated.
-In German-speaking Switzerland, 49% are entirely vaccinated, with 11% having received the first dose and 11.5% expressing a desire to get vaccinated. The undecided group is larger at 26.5%, and 2% will not get vaccinated.
-Italian-speaking Switzerland shows 44% entirely vaccinated. A significant 18% have received the first dose, and 10% would like to get vaccinated. However, 22% are undecided, and 2% will not get vaccinated.
+In the entire Switzerland, 48.5% of respondents are already entirely vaccinated. An additional 12% have received the first dose, and 2% would like to get vaccinated. However, 12.0% are undecided, and 25.5% state they will not get vaccinated.
+In French-speaking Switzerland, 48% of respondents are entirely vaccinated. 13.5% have received the first dose, and 2% would like to get vaccinated. 13.5% are undecided, and 23.0% will not get vaccinated.
+In German-speaking Switzerland, 49% are entirely vaccinated, with 11% having received the first dose and 2% expressing a desire to get vaccinated. The undecided group is larger at 11.5%, and 26.5% will not get vaccinated.
+Italian-speaking Switzerland shows 44% entirely vaccinated. A significant 18% have received the first dose, and 6% would like to get vaccinated. However, 10% are undecided, and 22% will not get vaccinated.
 Gender:
-Among women, 52% are already entirely vaccinated. Another 12% have received the first dose, and 12% would like to get vaccinated. About 22% are undecided, while 2% will not get vaccinated.
-For men, 50% are entirely vaccinated. 14% have received the first dose, and 11% would like to get vaccinated. 22.5% are undecided, and 2% will not get vaccinated.
+Among women, 52% are already entirely vaccinated. Another 12% have received the first dose, and 2% would like to get vaccinated. About 12% are undecided, while 22% will not get vaccinated.
+For men, 50% are entirely vaccinated. 14% have received the first dose, and 6% would like to get vaccinated. 11% are undecided, and 22% will not get vaccinated.
 Place of Residence:
-In large urban centers, 57% of respondents are entirely vaccinated. An additional 14.5% have received the first dose, and 10.5% express a willingness to get vaccinated. The undecided group is smaller at 16%, and 2% will not get vaccinated.
-In high agglomeration areas, 52.5% are entirely vaccinated, 11.5% have received the first dose, and 11% would like to get vaccinated. The undecided percentage is 23%, and 2% will not get vaccinated.
-In medium-sized cities, 45.5% are entirely vaccinated. 13% have received the first dose, and 13% express a desire to get vaccinated. A larger undecided group exists at 25%, with 2% unwilling to get vaccinated.
-In the agglomeration of medium size, 48.5% are fully vaccinated. 12.5% have received the first dose, and 12% would like to get vaccinated. 24% are undecided, while 2% will not get vaccinated.
-In the countryside, only 44.5% are entirely vaccinated. 11% have received the first dose, 13% would like to get vaccinated, while 29.5% remain undecided. 2% state they will not get vaccinated.
+In large urban centers, 57% of respondents are entirely vaccinated. An additional 14.5% have received the first dose, and 2% express a willingness to get vaccinated. The undecided group is at 10.5%, and 16% will not get vaccinated.
+In high agglomeration areas, 52.5% are entirely vaccinated, 11.5% have received the first dose, and 2% would like to get vaccinated. The undecided percentage is 11%, and 23% will not get vaccinated.
+In medium-sized cities, 45.5% are entirely vaccinated. 13% have received the first dose, and 3.5% express a desire to get vaccinated. The undecided group exists at 13%, with 25% unwilling to get vaccinated.
+In the agglomeration of medium size, 48.5% are fully vaccinated. 12.5% have received the first dose, and 3% would like to get vaccinated. 12% are undecided, while 24% will not get vaccinated.
+In the countryside, only 44.5% are entirely vaccinated. 11% have received the first dose, 2% would like to get vaccinated, while 13% remain undecided. 29.5% state they will not get vaccinated.
 Age:
 For those aged 15-24 years, only 26% are entirely vaccinated. 17.5% have received the first dose, and 9% would like to get vaccinated. A significant 18% are undecided, and 29.5% will not get vaccinated.
-Among 25-34-year-olds, 32% are entirely vaccinated. 18.5% have received the first dose, and 17.5% express a desire to get vaccinated. 28% are undecided, and 2% will not get vaccinated.
-In the 35-44 age group, 35.5% are entirely vaccinated. 19% have received the first dose, 12% want to get vaccinated, and 31% are undecided, with 2% refusing vaccination.
-For 45-64-year-olds, 52.5% are entirely vaccinated. 12% have received the first dose, and 12% would like to get vaccinated. 21% are undecided, with 2% not wanting the vaccine.
-In the 65-74 age bracket, 66% are entirely vaccinated. 15% have received the first dose, 6% would like to get vaccinated, and 11% are undecided, while 2% will not get vaccinated.
-Among those aged 75 years and older, a substantial 85% are entirely vaccinated. Only 3% have received the first dose, 1% would like to get vaccinated, and 8.5% are undecided, with 9.5% refusing vaccination.
+Among 25-34-year-olds, 32% are entirely vaccinated. 18.5% have received the first dose, and 4% express a desire to get vaccinated. 17.5% are undecided, and 28% will not get vaccinated.
+In the 35-44 age group, 35.5% are entirely vaccinated. 19% have received the first dose, 2.5% want to get vaccinated, and 12% are undecided, with 31% refusing vaccination.
+For 45-64-year-olds, 56.5% are entirely vaccinated. 12% have received the first dose, and 1% would like to get vaccinated. 9.5% are undecided, with 21% not wanting the vaccine.
+In the 65-74 age bracket, 82.5% are entirely vaccinated. 3% have received the first dose, 0.5% would like to get vaccinated, and 5.5% are undecided, while 8.5% will not get vaccinated.
+Among those aged 75 years and older, a substantial 85% are entirely vaccinated. Only 2.5% have received the first dose, 0.5% would like to get vaccinated, and 2.5% are undecided, with 9.5% refusing vaccination.
 Political Party Affiliation:
-Among supporters of the Greens, 54.5% are fully vaccinated. 14.5% have received the first dose, and 13.5% would like to get vaccinated. 14.5% are undecided, while 2% will not get vaccinated.
-PS supporters show the highest vaccination rate with 68.5% fully vaccinated. 13% have received the first dose, 9% want to get vaccinated, and 7% are undecided, with only 2% not wanting the vaccine.
-Green Liberals have 66% fully vaccinated. 15% have received the first dose, 9% want to get vaccinated, and 7.5% are undecided, with only 2% refusing vaccination.
-The Center shows 62.5% fully vaccinated. 13.5% have received the first dose, 11.5% want to get vaccinated, and 11.5% are undecided, with 2% refusing vaccination.
-The Liberals have 62.5% fully vaccinated. 13.5% have received the first dose, 11% want to get vaccinated, and 11% are undecided, with 2% refusing vaccination.
+Among supporters of the Greens, 54.5% are fully vaccinated. 14.5% have received the first dose, and 3% would like to get vaccinated. 13.5% are undecided, while 14.5% will not get vaccinated.
+PS supporters show the highest vaccination rate with 68.5% fully vaccinated. 13% have received the first dose, 2.5% want to get vaccinated, and 9% are undecided, with only 7% not wanting the vaccine.
+Green Liberals have 66% fully vaccinated. 15% have received the first dose, 2.5% want to get vaccinated, and 9% are undecided, with only 7.5% refusing vaccination.
+The Center shows 62% fully vaccinated. 13.5% have received the first dose, 1.5% want to get vaccinated, and 11.5% are undecided, with 11.5% refusing vaccination.
+The Liberals have 62.5% fully vaccinated. 13.5% have received the first dose, 2% want to get vaccinated, and 11% are undecided, with 11% refusing vaccination.
 UDC shows the lowest vaccination rate, with only 29% fully vaccinated. 7% have received the first dose, 11.5% want to get vaccinated, while a significant 51.5% say they will not get vaccinated.
 #End graph placehoder 1.
 
