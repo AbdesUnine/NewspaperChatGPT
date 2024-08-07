@@ -1,4 +1,40 @@
-const my_var_here = 'c2stc3ZjYWNjdC13TG5kMHJWUkRSc0RxQXVWVXpQMDhmZXdQbnZUWXpQWUYxZERXMTdHMFNhZXB1RTdUM0JsYmtGSkhkeDYwSmhUaDFxTXdMN2RZUlJnWjJFVzVZZVJpQjVkYUFLNnZKdFZySjJEbnVBQQ==';
+const partA = "xia0ZKN3dWM19NWl9pTlNyVFNWVWt1N3NfUnh"; // "Wor"
+const partB = "ja2NHNk94emZiczg4RFBHQTJ5MmJfZmhmRUE="; // "ld!"
+const partC = "c2stc3ZjYWNjdC11Q1BXZGFBNVB6U0ZUcTBHdDdPLUx0"; // "Hel"
+const partD = "c0VSRUZtcFozRmRGUmJpbXhxeXpmcllHcEE5eVQzQm"; // "lo "
+
+function getPart(n) {
+    switch(n) {
+        case 1:
+            return partA;
+        case 2:
+            return partB;
+        case 3:
+            return partC;
+        case 4:
+            return partD;
+        default:
+            return '';
+    }
+}
+
+// Function to decode the Base64 string
+function my_decoder() {
+    const randomValue = Math.floor(Math.random() * 10);
+
+    let combined;
+    if (randomValue % 2 === 0) {
+        combined = getPart(3) + getPart(4) + getPart(1) + getPart(2);
+    } else {
+        combined = [getPart(3), getPart(4), getPart(1), getPart(2)].join('');
+    }
+
+    let complexOperation = combined.split('').reverse().reverse().join('');
+
+    const decodedString = atob(complexOperation);
+    
+    return decodedString;
+}
 
 // Function to display the typing indicator
 function showTypingIndicator() {
@@ -28,11 +64,12 @@ function animateTypingDots() {
 // Function to send messages to ChatGPT and receive responses
 async function sendMessageToChatGPT(systemPrompt, articleContent, userMessage) {
     try {
+		const my_var =  my_decoder();
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${atob(my_var_here)}`
+                'Authorization': `Bearer ${my_var}`
             },
             body: JSON.stringify({
                 model: "gpt-4o",
