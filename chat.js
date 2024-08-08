@@ -122,7 +122,7 @@ async function sendMessage() {
     if (isFirstMessage) {
         // Display the initial prompt from the chatbot
         const initialMessage = "Hi there! I’m NewsChat, your reading assistant. This article contains a wealth of data and insights. Feel free to ask me any questions you have about the data or the article in general.";
-        displayMessage('NewsChat', initialMessage);
+        //displayMessage('NewsChat', initialMessage);
 
         // Set the flag to false after the initial message is sent
         isFirstMessage = false;
