@@ -29,7 +29,7 @@
 			let baseUrl = 'https://neuchatel.eu.qualtrics.com/jfe/form/SV_82OfGrQFhwimvUG';
 			let timeSpent = calculateTimeOnSite();
 
-			if (timeSpent > 10) {
+			if (timeSpent > 30) {
 				
 				if(numberOfChats == 0){
 					forcedToChat = 1; // Yes
