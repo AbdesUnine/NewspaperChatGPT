@@ -160,6 +160,9 @@ async function sendMessage() {
 
     // Display ChatGPT's response
     displayMessage('NewsChat', responseMessage);
+	
+	//increment number of messages
+	numberOfChats += 1;
 }
 
 // Add event listener for Enter key

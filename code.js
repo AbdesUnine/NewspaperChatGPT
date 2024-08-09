@@ -30,6 +30,12 @@
 			let timeSpent = calculateTimeOnSite();
 
 			if (timeSpent > 10) {
+				
+				if(numberOfChats == 0){
+					alert('Please interact with the NewsChat before going back to the survey.');
+					return;
+				}
+				
 				// Add timeSpent to params for URL
 				params['timeSpent'] = timeSpent;
 
@@ -57,9 +63,9 @@
 				// Submit the form
 				form.submit();
 			} else {
-				alert('Veuillez passer plus de temps sur le site');
+				alert('Please spend more time onsite');
 			}
 		} else {
-			alert('Veuillez passer plus de temps sur le site');
+			alert('Please spend more time onsite');
 		}
 	}

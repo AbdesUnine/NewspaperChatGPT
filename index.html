@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<button class="fixed-button" onclick="redirectToQualtrics()">Return to Qualtrics</button>
+<button class="fixed-button" onclick="redirectToQualtrics()">Return to Survey</button>
 
 <div class="page-wrapper">
 <div class="container">
@@ -187,6 +187,7 @@ Published on July 9, 2021 at 5:00 PM
     var openAiApiKey = null;
 	// Track whether it's the first message sent
 	var isFirstMessage = true;
+	var numberOfChats = 0;
 
     window.onload = function() {
         startTime = new Date();
