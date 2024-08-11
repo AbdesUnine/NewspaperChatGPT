@@ -122,7 +122,7 @@ async function sendMessage() {
     if (isFirstMessage) {
         // Display the initial prompt from the chatbot
         const initialMessage = "Hi there! I’m NewsChat, your reading assistant. This article contains a wealth of data and insights. Feel free to ask me any questions you have about the data or the article in general.";
-        //displayMessage('NewsChat', initialMessage);
+        displayMessage('NewsChat', initialMessage);
 
         // Set the flag to false after the initial message is sent
         isFirstMessage = false;
@@ -150,6 +150,19 @@ async function sendMessage() {
     // Show the typing indicator
     showTypingIndicator();
     const stopTypingDots = animateTypingDots();
+	
+	   // Convert the input to lowercase for case-insensitive checking
+    const lowerCaseMessage = userMessage.toLowerCase();
+
+    // Check if the input contains any of the relevant terms
+    const chatPrompt = lowerCaseMessage.includes('summarize') ||
+                       lowerCaseMessage.includes('takeaways') ||
+                       lowerCaseMessage.includes('overview') ||
+                       lowerCaseMessage.includes('highlight') ||
+                       lowerCaseMessage.includes('summary') ||
+                       lowerCaseMessage.includes('recap')
+        ? "Summarize the article in your own style, focusing on these points: 60% have received at least one dose of the COVID-19 vaccine. No differences across genders or linguistics regions. Opinions are almost evenly split about vaccinating health workers, with nearly as many respondents opposing the mandate as supporting it. Solidarity has decreased and selfishness increased since the beginning of the crisis. Trust in the government has increased to over 54% after a low in January. Please do not use formatting characters such as **"
+        : userMessage;
 
     // Send the message to ChatGPT and get a response
     const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, userMessage);
