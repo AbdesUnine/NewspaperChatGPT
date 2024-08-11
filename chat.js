@@ -165,7 +165,7 @@ async function sendMessage() {
         : userMessage;
 
     // Send the message to ChatGPT and get a response
-    const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, userMessage);
+    const responseMessage = await sendMessageToChatGPT(systemPrompt, articleContent, chatPrompt);
 
     // Hide the typing indicator
     hideTypingIndicator();
