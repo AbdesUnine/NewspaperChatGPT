@@ -31,17 +31,17 @@
 
 			if (timeSpent > 30) {
 				
-				if(numberOfChats == 0){
-					forcedToChat = 1; // Yes
-					alert('Please interact with the NewsChat before going back to the survey.');
-					return;
-				}
+				//if(numberOfChats == 0){
+					//forcedToChat = 1; // Yes
+					//alert('Please interact with the NewsChat before going back to the survey.');
+					//return;
+				//}
 				
 				// Add timeSpent to params for URL
 				params['timeSpent'] = timeSpent;
 				
 				// Add timeSpent to params for URL
-				params['forcedToChat'] = forcedToChat;
+				//params['forcedToChat'] = forcedToChat;
 
 				// Construct the query string for URL parameters
 				let queryString = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&');
